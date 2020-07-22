@@ -24,7 +24,7 @@ class BookLover:
         else:
             self.bookLst.append((bookName, rating))
             self.numBooks += 1
-        return True
+            return True
 
     def hasRead(self, bookName):
         return bookName in [pair[0] for pair in self.bookLst]
