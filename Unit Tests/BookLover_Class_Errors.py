@@ -1,9 +1,12 @@
+##Module 5 Live Session Exercise: Testing Activity
+##Anna Landi, Maureen O’Shea, Michael Kolonay, David Vann
+##aol4h, mo2cr, mhk9c, dv6bq
+
+
 class BookLover:
     # fields: name, email, favGenre, favGenre, numBooks, bookLst (a list of tuples)
+    # bookLst[0] = ('book_name', numeric rating)
 
-    # Local variables
-
-    
     def __init__(self, name, email, favGenre, numBooks, bookLst=None,):  # constructor
         self.name = name
         self.email = email
@@ -27,10 +30,11 @@ class BookLover:
             return False
 
     def hasRead(self, bookName):
-        return bookName in [pair[0] for pair in self.bookLst]
+        return bookName in [pair[1] for pair in self.bookLst]
 
     def numBooksRead(self):
-        return self.numBooks
+        return len(self.bookLst)
 
     def favBooks(self):
-        pass
+        fav_list = [book[0] for book in self.bookLst if book[1] > 2]
+        return fav_list

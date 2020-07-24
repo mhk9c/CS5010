@@ -5,7 +5,7 @@
 
 
 import unittest
-from BookLover_Class import *
+from BookLover_Class_Errors import *
 
 class BookLoverTestCases(unittest.TestCase): # inherit from unittest.TestCase
     # Unit testing adding grades in AStudent_Class.py
